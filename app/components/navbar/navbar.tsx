@@ -45,15 +45,9 @@ const Navbar: React.FC = () => {
               width={150}
               height={50}
               className="logo-image"
-              onError={(e) => {
-                // Fallback if logo doesn't load
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const fallback = target.nextSibling as HTMLElement;
-                if (fallback) fallback.style.display = 'flex';
-              }}
+              priority
             />
-            <div className="logo-fallback">
+            <div className="logo-fallback" style={{ display: 'none' }}>
               <span className="fallback-icon">💰</span>
               <span className="fallback-text">Invest India</span>
             </div>
@@ -78,14 +72,9 @@ const Navbar: React.FC = () => {
                 width={150}
                 height={50}
                 className="mobile-logo-image"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const fallback = target.nextSibling as HTMLElement;
-                  if (fallback) fallback.style.display = 'flex';
-                }}
+                priority
               />
-              <div className="mobile-logo-fallback">
+              <div className="mobile-logo-fallback" style={{ display: 'none' }}>
                 <span className="fallback-icon">💰</span>
                 <span className="fallback-text">Invest India</span>
               </div>
