@@ -38,14 +38,14 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="footer-column">
-            <h3 className="footer-heading">Quick Links</h3>
+            {/* <h3 className="footer-heading">Quick Links</h3>
             <ul className="footer-links">
               <li><a href="#home" className="footer-link">Home</a></li>
               <li><a href="#about" className="footer-link">About Advisor</a></li>
               <li><a href="#services" className="footer-link">Our Services</a></li>
               <li><a href="#how-it-works" className="footer-link">How It Works</a></li>
               <li><a href="#contact" className="footer-link">Contact</a></li>
-            </ul>
+            </ul> */}
           </div>
 
           {/* Services */}

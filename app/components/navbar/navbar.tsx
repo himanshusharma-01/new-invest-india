@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import './navbar.css';
 
 const Navbar: React.FC = () => {
@@ -36,7 +37,7 @@ const Navbar: React.FC = () => {
 
         {/* Centered Logo */}
         <div className="nav-logo">
-          <div className="logo-container">
+          <Link href="/" className="logo-container">
             <img 
               src="/LOGO.png" 
               alt="Invest India" 
@@ -53,15 +54,15 @@ const Navbar: React.FC = () => {
               <span className="fallback-icon">💰</span>
               <span className="fallback-text">Invest India</span>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* Desktop Login Button */}
         <div className="nav-actions">
-          <button className="login-button">
+          <Link href="/login" className="login-button">
             <span className="login-icon">🔐</span>
             <span className="login-text">Login</span>
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu */}
@@ -86,10 +87,10 @@ const Navbar: React.FC = () => {
             </div>
             
             <div className="mobile-auth">
-              <button className="mobile-login-button">
+              <Link href="/login" className="mobile-login-button" onClick={toggleMobileMenu}>
                 <span className="login-icon">🔐</span>
                 Login to Dashboard
-              </button>
+              </Link>
             </div>
             
             <div className="mobile-links">

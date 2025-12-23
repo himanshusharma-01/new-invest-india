@@ -4,8 +4,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
 import './landingpage.css';
+import { useRouter } from 'next/navigation';
 
 const CreativeHomepage: React.FC = () => {
+  const router = useRouter();
   const [animatedValue, setAnimatedValue] = useState(0);
   const graphRef = useRef<HTMLDivElement>(null);
 
@@ -51,7 +53,7 @@ const CreativeHomepage: React.FC = () => {
           <div className="hero-text">
             <div className="badge">
               <span className="badge-dot"></span>
-              Trusted by 10,000+ Investors
+              Trusted by 100+ Investors
             </div>
             <h1 className="hero-heading">
               <span className="gradient-text">Invest Smart.</span>
@@ -63,24 +65,21 @@ const CreativeHomepage: React.FC = () => {
               guidance tailored to your budget and goals. Start your wealth creation journey today.
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary">
+              <button className="btn-primary" onClick={() => router.push('/login')}>
                 <span className="btn-text">Get Started</span>
                 <span className="btn-arrow">→</span>
               </button>
-              <button className="btn-secondary">
-                <span className="play-icon">▶</span>
-                Watch Demo
-              </button>
+             
             </div>
             
             <div className="hero-stats">
               <div className="stat">
-                <div className="stat-number">₹50Cr+</div>
+                <div className="stat-number">₹20 Lakh+</div>
                 <div className="stat-label">Assets Managed</div>
               </div>
               <div className="stat">
-                <div className="stat-number">98%</div>
-                <div className="stat-label">Success Rate</div>
+                <div className="stat-number">28%</div>
+                <div className="stat-label">Return Rate</div>
               </div>
               <div className="stat">
                 <div className="stat-number">24/7</div>
@@ -131,18 +130,18 @@ const CreativeHomepage: React.FC = () => {
         <div className="section-container">
           <div className="about-content">
             <div className="about-visual">
-              <div className="floating-card card-1">
-                <div className="card-icon">📈</div>
-                <div className="card-text">10+ Years Experience</div>
-              </div>
-              <div className="floating-card card-2">
+             
+              {/* <div className="floating-card card-2">
                 <div className="card-icon">💼</div>
                 <div className="card-text">SEBI Certified</div>
               </div>
               <div className="floating-card card-3">
                 <div className="card-icon">⭐</div>
                 <div className="card-text">4.9/5 Rating</div>
-              </div>
+              </div> <div className="floating-card card-1">
+                <div className="card-icon">📈</div>
+                <div className="card-text">10+ Years Experience</div>
+              </div> */}
               <div className="main-image">
                 <div className="image-placeholder">
                   <div className="advisor-glow"></div>
@@ -155,7 +154,7 @@ const CreativeHomepage: React.FC = () => {
                 Meet Your <span className="gradient-text">Financial Guide</span>
               </h2>
               <div className="advisor-info">
-                <h3 className="advisor-name">Mr. [Fathers Full Name]</h3>
+                <h3 className="advisor-name">Mr. Satish Kumar Sharma</h3>
                 <p className="advisor-title">Founder & Chief Investment Advisor</p>
               </div>
               <p className="about-description">
@@ -219,7 +218,7 @@ const CreativeHomepage: React.FC = () => {
                 <span>Risk Analysis</span>
                 <span>Portfolio Tracking</span>
               </div>
-              <button className="service-cta">
+              <button className="service-cta" onClick={() => router.push('/login')}>
                 Explore Stocks →
               </button>
             </div>
@@ -237,7 +236,7 @@ const CreativeHomepage: React.FC = () => {
                 <span>Fund Selection</span>
                 <span>Auto Rebalance</span>
               </div>
-              <button className="service-cta">
+              <button className="service-cta" onClick={() => router.push('/login')}>
                 Start SIP →
               </button>
             </div>
@@ -254,7 +253,7 @@ const CreativeHomepage: React.FC = () => {
                 <span>Growth Tracking</span>
                 <span>Goal Planning</span>
               </div>
-              <button className="service-cta">
+              <button className="service-cta" onClick={() => router.push('/login')}>
                 Build Portfolio →
               </button>
             </div>
@@ -336,10 +335,15 @@ const CreativeHomepage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <button className="whatsapp-cta">
+            <a 
+              href="https://wa.me/919888673282" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="whatsapp-cta"
+            >
               <span className="whatsapp-icon">💬</span>
               Start Chat on WhatsApp
-            </button>
+            </a>
           </div>
         </div>
       </section>
