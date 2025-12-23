@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import './navbar.css';
 
 const Navbar: React.FC = () => {
@@ -38,9 +39,11 @@ const Navbar: React.FC = () => {
         {/* Centered Logo */}
         <div className="nav-logo">
           <Link href="/" className="logo-container">
-            <img 
+            <Image 
               src="/LOGO.png" 
               alt="Invest India" 
+              width={150}
+              height={50}
               className="logo-image"
               onError={(e) => {
                 // Fallback if logo doesn't load
@@ -69,9 +72,11 @@ const Navbar: React.FC = () => {
         <div className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
           <div className="mobile-menu-content">
             <div className="mobile-logo">
-              <img 
+              <Image 
                 src="/LOGO.png" 
                 alt="Invest India" 
+                width={150}
+                height={50}
                 className="mobile-logo-image"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
