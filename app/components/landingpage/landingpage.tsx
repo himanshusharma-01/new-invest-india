@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import Navbar from '../navbar/navbar';
 import Footer from '../footer/footer';
 import './landingpage.css';
@@ -144,6 +145,13 @@ const CreativeHomepage: React.FC = () => {
               </div> */}
               <div className="main-image">
                 <div className="image-placeholder">
+                  <Image 
+                    src="/FounderImage.png" 
+                    alt="Mr. Satish Kumar Sharma - Founder & Chief Investment Advisor" 
+                    width={300} 
+                    height={300}
+                    className="founder-image"
+                  />
                   <div className="advisor-glow"></div>
                 </div>
               </div>
@@ -206,56 +214,119 @@ const CreativeHomepage: React.FC = () => {
           </h2>
           
           <div className="services-grid">
-            <div className="service-card">
+            <div className="service-card premium-card">
+              <div className="plan-badge premium-badge">Premium</div>
               <div className="service-icon-wrapper">
-                <div className="service-icon">📊</div>
-                <div className="icon-glow"></div>
+                <Image 
+                  src="/STOCK ADV.png" 
+                  alt="Stock Advisory" 
+                  width={120} 
+                  height={120}
+                  className="service-image"
+                />
               </div>
-              <h3>Smart Stock Advisory</h3>
-              <p>AI-powered stock recommendations with real-time market analysis and risk assessment.</p>
+              <h3>Premium Plan</h3>
+              <p className="plan-subtitle">Long Term • High Growth</p>
+              <div className="pricing-section">
+                <div className="price-main">
+                  <span className="currency">₹</span>
+                  <span className="price-amount">1,999</span>
+                  <span className="price-period">/month</span>
+                </div>
+                <div className="investment-amount">
+                  Total Investment: <span className="investment-value">₹1,50,000</span>
+                </div>
+              </div>
               <div className="service-features">
-                <span>Daily Updates</span>
-                <span>Risk Analysis</span>
-                <span>Portfolio Tracking</span>
+                <span>Premium Advisory</span>
+                <span>High Growth</span>
+                <span>Long Term</span>
               </div>
-              <button className="service-cta" onClick={() => router.push('/login')}>
-                Explore Stocks →
-              </button>
+              <a 
+                href="https://wa.me/919888673282?text=Hi!%20I%20am%20interested%20in%20the%20Premium%20Plan%20subscription.%20Please%20guide%20me%20further." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="service-cta premium-cta"
+              >
+                Choose Premium →
+              </a>
             </div>
 
-            <div className="service-card featured">
-              <div className="featured-badge">Most Popular</div>
+            <div className="service-card featured gold-card">
+              <div className="featured-badge">Most Subscribed</div>
+              <div className="plan-badge gold-badge">Gold</div>
               <div className="service-icon-wrapper">
-                <div className="service-icon">💰</div>
-                <div className="icon-glow"></div>
+                <Image 
+                  src="/budgetINVEST.png" 
+                  alt="Budget Investment" 
+                  width={120} 
+                  height={120}
+                  className="service-image"
+                />
               </div>
-              <h3>Mutual Fund Master</h3>
-              <p>Curated SIP plans with top-performing funds and automated portfolio rebalancing.</p>
+              <h3>Gold Plan</h3>
+              <p className="plan-subtitle">Moderate Growth</p>
+              <div className="pricing-section">
+                <div className="price-main">
+                  <span className="currency">₹</span>
+                  <span className="price-amount">999</span>
+                  <span className="price-period">/month</span>
+                </div>
+                <div className="investment-amount">
+                  Total Investment: <span className="investment-value">₹1,00,000</span>
+                </div>
+              </div>
               <div className="service-features">
-                <span>SIP Planning</span>
-                <span>Fund Selection</span>
-                <span>Auto Rebalance</span>
+                <span>Balanced Portfolio</span>
+                <span>Moderate Growth</span>
+                <span>Expert Guidance</span>
               </div>
-              <button className="service-cta" onClick={() => router.push('/login')}>
-                Start SIP →
-              </button>
+              <a 
+                href="https://wa.me/919888673282?text=Hi!%20I%20am%20interested%20in%20the%20Gold%20Plan%20subscription.%20Please%20guide%20me%20further." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="service-cta gold-cta"
+              >
+                Choose Gold →
+              </a>
             </div>
 
-            <div className="service-card">
+            <div className="service-card silver-card">
+              <div className="plan-badge silver-badge">Silver</div>
               <div className="service-icon-wrapper">
-                <div className="service-icon">🎯</div>
-                <div className="icon-glow"></div>
+                <Image 
+                  src="/MFP.png" 
+                  alt="Mutual Fund Planning" 
+                  width={120} 
+                  height={120}
+                  className="service-image"
+                />
               </div>
-              <h3>Budget Builder</h3>
-              <p>Start with any amount. Get personalized plans that grow with your investment capacity.</p>
+              <h3>Silver Plan</h3>
+              <p className="plan-subtitle">Starter Plan</p>
+              <div className="pricing-section">
+                <div className="price-main">
+                  <span className="currency">₹</span>
+                  <span className="price-amount">500</span>
+                  <span className="price-period">/month</span>
+                </div>
+                <div className="investment-amount">
+                  Total Investment: <span className="investment-value">₹50,000</span>
+                </div>
+              </div>
               <div className="service-features">
-                <span>Flexible Amounts</span>
-                <span>Growth Tracking</span>
-                <span>Goal Planning</span>
+                <span>Basic Advisory</span>
+                <span>Starter Friendly</span>
+                <span>Affordable</span>
               </div>
-              <button className="service-cta" onClick={() => router.push('/login')}>
-                Build Portfolio →
-              </button>
+              <a 
+                href="https://wa.me/919888673282?text=Hi!%20I%20am%20interested%20in%20the%20Silver%20Plan%20subscription.%20Please%20guide%20me%20further." 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="service-cta silver-cta"
+              >
+                Choose Silver →
+              </a>
             </div>
           </div>
         </div>
